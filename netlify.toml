@@ -1,0 +1,10 @@
+[build]
+  publish = "public"
+
+[[edge_functions]]
+  function = "relay"
+  path = "/*"
+
+[context.production.environment]
+  # Set TARGET_URL in Netlify dashboard → Site settings → Environment variables
+  # Example: TARGET_URL = "https://YOUR_VPS_IP:PORT"
