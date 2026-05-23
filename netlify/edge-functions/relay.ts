@@ -1,4 +1,4 @@
-import type { Config, Context } from "@netlify/edge-functions";
+import type { Context } from "@netlify/edge-functions";
 
 // Env vars:
 //   TARGET_URL           — VPS mode: backend Xray server (e.g. http://1.2.3.4:8080)
@@ -194,6 +194,3 @@ export default async (request: Request, context: Context) => {
   return proxyFetch(parsedTarget.toString(), request, parsedTarget.host, clientIp, timeoutMs);
 };
 
-export const config: Config = {
-  path: "/*",
-};
