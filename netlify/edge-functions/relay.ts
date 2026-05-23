@@ -1,4 +1,5 @@
-import type { Context } from "@netlify/edge-functions";
+// deno-lint-ignore-file no-explicit-any
+type Context = { ip?: string };
 
 // Env vars:
 //   TARGET_URL           — VPS mode: backend Xray server (e.g. http://1.2.3.4:8080)
